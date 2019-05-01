@@ -1,3 +1,6 @@
+#ifdef PLATWIND
+#include <Windows.h>
+#endif
 #include <GL/gl.h>
 #include <SDL.h>
 #include <stdio.h>
