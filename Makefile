@@ -1,6 +1,4 @@
+all: chip8
 
-all: chip8.c
-	gcc -O3 -o chip8 $(shell pkg-config --cflags --libs sdl2) -lGL chip8.c
-
-clean:
-	@rm chip8
+chip8: chip8.c
+	gcc -std=c89 -O3 -Wall chip8.c $(shell pkg-config --cflags --libs sdl2)  -lGL -lGLU -o chip8
